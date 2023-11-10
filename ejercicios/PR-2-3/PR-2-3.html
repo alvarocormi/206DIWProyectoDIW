@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alvaro Cordero Miñambres</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 1.0rem;
+		}
+
+		ul:nth-child(1) {
+			padding: 15px;
+			width: 400px;
+			height: 350px;
+			background-color: black;
+
+		}
+
+		li {
+			list-style: none;
+		}
+
+		ul:nth-child(1) a {
+			display: block;
+			color: white;
+			text-decoration: none;
+			margin-bottom: 10px;
+			background-color: blueviolet;
+			width: 250px;
+			height: 50px;
+			text-align: center;
+			line-height: 48px;
+		}
+
+		ul:nth-child(1) a:hover {
+			background-color: purple;
+			margin-left: 20px;
+		}
+
+		.second_list {
+			width: 800px;
+			height: 60px;
+			background-color: black;
+			list-style: none;
+		}
+
+		.second_list li {
+			display: inline-block;
+			width: 120px;
+			height: 48px;
+		}
+
+		.second_list a {
+			margin-top: 5px;
+			display: block;
+			line-height: 48px;
+			width: 100%;
+			text-align: center;
+			color: white;
+			text-decoration: underline;
+			border-radius: 5px;
+		}
+
+		.second_list a:link {
+			background-color: pink;
+		}
+
+		.second_list a:visited {
+			background-color: coral;
+		}
+
+		.second_list a:hover {
+			color: black;
+			background-color: white;
+		}
+
+		.second_list a:active {
+			background-color: aqua;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li><a href="#">Primera opcion</a></li>
+			<li><a href="#">Segunda opcion</a></li>
+			<li><a href="#">Tercera opcion</a></li>
+			<li><a href="#">Cuarta opcion</a></li>
+			<li><a href="#">Quinta opcion</a></li>
+		</ul>
+		<ul class="second_list">
+			<li><a href="#">Inicio</a></li>
+			<li><a href="#">Secretaria</a></li>
+			<li><a href="#">Alumnos</a></li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+	</div>
+</body>
+</html>
