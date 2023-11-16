@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PR-2-7-Alvaro Cordero Miñambres</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 100vw;
+			height: 100vh;
+		}
+
+		header {
+			height: 10vh;
+		}
+
+		table {
+			width: 100%;
+			height: 10vh;
+			border-collapse: collapse;
+			
+
+		}
+
+		header td {
+			width: 33.33%;
+			height: 100%;
+			vertical-align: middle;
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: bold;
+			
+			border-bottom: 2px solid orange;
+
+		}
+
+		header td:nth-of-type(1) {
+			
+			background-color: cadetblue;
+		}
+
+		header td:nth-of-type(2) {
+			background-color: skyblue;
+		}
+
+		header td:nth-of-type(3) {
+			background-color: blueviolet;
+		}
+
+		section {
+			width: 100%;
+			height: 80vh;
+			position: relative;
+		}
+
+		nav {
+			height: 100%;
+			width: 20%;
+			background-color: #228899;
+			position: absolute;
+		}
+
+		ul {
+			list-style: none;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		ul li a {
+			color: white;
+			text-decoration: none;
+			padding-left: 5px;
+			display: block;
+			width: 100%;
+			height: 32px;
+			border-bottom: 1px solid gray;
+			line-height: 32px;
+			font-weight: bold;
+		}
+
+		
+		main {
+			position: absolute;
+			width: 60%;
+			height: 100%;
+			left: 20%;
+			border-left: 2px solid orange;
+			border-right: 2px solid orange;
+
+		}
+
+		main article:nth-child(odd) {
+			background-color: #87ceeb;
+			height: 25vh;
+		}
+
+		main article:nth-child(even) {
+			background-color: #7fffd4;
+			height: 30vh;
+		}
+
+		aside {
+			height: 100%;
+			width: 20%;
+			background-color: #ff4500;
+			right: 0;
+			position: absolute;
+			padding: 5px;
+			color: white;
+		}
+
+	
+
+		h2 {
+			margin: 0;
+		}
+
+		article {
+			padding: 10px;
+		}
+
+		span {
+			display: block;
+			padding-top: 20px;
+		}
+
+		
+		article:nth-of-type(2), td:nth-of-type(2) *  {
+			text-align: center;
+			margin: auto;
+		}
+
+		article:nth-last-of-type(2) h2, article:nth-last-of-type(2) h3 {
+			text-align: center;
+		}
+
+		article table {
+			margin-top: 50px;
+		}
+
+		article table td:nth-child(1) {
+			width: 80%;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+		
+		footer {
+			background-color: #cae91e;
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			height: 10vh;
+			border-top: 4px solid orange;
+			
+		}
+
+		p {
+			margin: 0;
+		}
+
+		
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<table>
+				<td>&#127981 Logo empresa &#128509</td>
+				<td>&#128269 Buscar</td>
+				<td>👤Cuenta, 🛒 cesta </td>
+			</table>
+		</header>
+		<section>
+			<nav>
+				<ul>
+					<li><a href="#">option 1</a></li>
+					<li><a href="#">option 2</a></li>
+					<li><a href="#">option 3</a></li>
+					<li><a href="#">option 4</a></li>
+				</ul>
+			</nav>
+			<main>
+				<article>
+					<h2>Mi articulo 1</h2>
+					<table>
+						<td>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</td>
+						<td>
+							<img src="http://picsum.photos/id/201/100/100" alt="">
+						</td>
+					</table>
+				</article>
+				<article>
+					<h2>
+						Mi articulo 2
+					</h2>
+					<h3>
+						Subtitulo 2 articulo 2
+					</h3>
+					<table>
+						<td>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</td>
+						<td>
+							<img src="http://picsum.photos/id/201/100/100" alt="">
+							<span>Links</span>
+						</td>
+					</table>
+					
+					
+				</article>
+				<article>
+					<h2>
+						Mi articulo 3
+					</h2>
+					<table>
+						<td>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</td>
+						<td>
+							<img src="http://picsum.photos/id/201/100/100" alt="">
+						</td>
+					</table>
+				</article>
+			</main>
+			<aside>
+				<p>Aqui tenemos nuestra seccion de links interesantes</p>
+				<a href="#">Link1</a>&nbsp;
+				<a href="#">Link2</a>...
+			</aside>
+		</section>
+		<footer>
+			<p>Diseño de Interfaces Web</p>
+		</footer>
+	</div>
+</body>
+</html>

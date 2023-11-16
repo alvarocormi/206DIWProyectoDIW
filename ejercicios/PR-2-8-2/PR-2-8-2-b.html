@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-2-b Alvaro Cordero Miñambres</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        font-weight: bold;
+      }
+
+      nav {
+        width: 70vw;
+        height: 70vh;
+        margin: auto;
+        position: relative;
+		overflow: hidden;
+      }
+
+      input {
+        display: none;
+      }
+
+      nav label:nth-child(3) {
+        display: block;
+        background-color: #008080;
+        width: 164px;
+        height: 40px;
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        text-transform: uppercase;
+      }
+
+      menu {
+        width: 90%;
+        height: 100%;
+        background-color: #226546e8;
+        position: absolute;
+		top: 2.5rem;
+		/* display: none; */
+		left: -100%;
+		transition: left 0.5s ease-in-out;
+      }
+
+      menu label {
+        display: block;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        font-size: 1.4rem;
+        border-radius: 50%;
+        color: white;
+        background-color: #ff6347;
+        top: 10px;
+        right: 10px;
+        position: absolute;
+      }
+
+      menu p {
+        width: 440px;
+        height: 250px;
+        padding: 15px;
+        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: #666;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -220px;
+        margin-top: -125px;
+      }
+
+	  #open:checked ~ menu {
+		left: 0;
+	  }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h2>Ventana modal con :checked y radio buttons</h2>
+      <input type="radio" name="rb" id="open" />
+      <label for="open">Mostrar Modal</label>
+      <input type="radio" name="rb" id="close" />
+      <menu>
+        <label for="close">X</label>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+          obcaecati, pariatur consequuntur, consectetur excepturi nostrum
+          commodi, sunt ad tempore maxime laborum suscipit quod voluptas
+          tempora. Sequi illo dignissimos distinctio cupiditate.
+        </p>
+      </menu>
+    </nav>
+  </body>
+</html>

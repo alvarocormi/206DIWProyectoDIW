@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-7 Alvaro Cordero Miñambres</title>
+    <style>
+      * {
+        -ff: Verdana, sans-serif;
+        font-family: var(-ff);
+        box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      nav {
+        width: 100%;
+        height: 120px;
+        position: relative;
+      }
+
+      header {
+        height: 70px;
+        background-color: #131921;
+      }
+
+      menu {
+        height: 40px;
+        background-color: #232f3e;
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+		font-size: 1.1rem;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+        margin-left: 5px;
+      }
+
+      input {
+        display: none;
+      }
+
+      label img:hover {
+        border: 2px solid white;
+      }
+
+	  ul {
+		width: 340px;
+		height: 100vh;
+		list-style: none;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		overflow: scroll;
+	  }
+
+
+	  .hola {
+		display: block;
+		line-height: 48px;
+		width: 100%;
+		height: 48px;
+		color: white;
+        background-color: #232f3e;
+		display: block;
+	  }
+
+	  a,span {
+		display: block;
+		width: 100%;
+		height: 48px;
+		text-decoration: none;
+		line-height: 48px;
+		color: #353535;
+		background-color: white;
+		padding-left: 20px;
+		
+	  }
+
+
+	  a:hover {
+		background-color: #ccc;
+	  }
+
+	  span {
+		font-weight: bold;
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <header>Amazon</header>
+        <menu>
+          <input type="radio" name="br" id="open" />
+          <label for="open">
+            <img src="./img/menu.png" alt="listaMenu" />
+          </label>
+          <input type="radio" name="br" id="close" />
+          <ul>
+			<span class="hola">Hola, identificate</span>
+			<span>Tendencias</span>
+            <li><a href="#">Lo mas vendido</a></li>
+            <li><a href="#">Ultimas novedades</a></li>
+            <li><a href="#">Productos del momento</a></li>
+			<span>Contenido y dispositivos digitales</span>
+            <li><a href="#">Amazon Prime video</a></li>
+            <li><a href="#">Amazon Music</a></li>
+            <li><a href="#">Amazon Photos</a></li>
+            <li><a href="#">Echo y Alexa</a></li>
+          </ul>
+        </menu>
+        <label for="close">close</label>
+      </nav>
+    </div>
+  </body>
+</html>

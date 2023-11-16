@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-5-2 Alvaro Cordero</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Impact, sans-serif;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(at 0px 0px, yellow 20%, blue 80%);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .circle::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 130px;
+      height: 6px;
+      background-color: blue;
+      bottom: 0;
+      left: 50%;
+      box-shadow: 0 -3px 6px 10px blue;
+      opacity: 0.6;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  </style>
+  <body>
+    <section class="container">
+      <div class="circle"></div>
+    </section>
+  </body>
+</html>

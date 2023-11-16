@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-5-3 Alvaro Cordero</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 350px;
+      height: 200px;
+      background-color: #d89a43;
+      border-radius: 15px;
+      position: relative;
+      margin: 100px auto;
+    }
+
+    p:nth-of-type(1) {
+      padding: 20px 0 0 40px;
+      font-weight: bold;
+
+    }
+
+    p:nth-of-type(2) {
+      margin-left: 120px;
+      position: relative;
+      top: -5px;
+      font-size: 0.8rem;
+
+    }
+
+    p {
+      display: inline-block;
+      margin: 0;
+      width: 100px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: auto;
+      padding-top: 60px;
+    }
+
+    .box::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      display: block;
+      border-left: 40px solid transparent;
+      border-top: 0px solid transparent;
+      border-right:40px solid transparent;
+      border-bottom:40px solid brown;
+      position: absolute;
+      top: -40px;
+      right: 42%;
+    }
+
+    .box::after {
+      content: "";
+      width: 0px;
+      height: 0px;
+      display: block;
+      border-left: 25px solid transparent;
+      border-top: 25px solid blue;
+      border-right:25px solid transparent;
+      border-bottom:25px solid transparent;
+      position: absolute;
+      bottom: -50px;
+      left: 10%;
+    }
+
+
+    
+    
+  </style>
+  <body>
+    <section>
+     <div class="box">
+      <p>Caja</p>
+      <p>Parrafo 1</p>
+      <img src="http://picsum.photos/id/650/75/75" alt="">
+     </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-1-a Alvaro Cordero Miñambres</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
+
+
+    ul {
+      list-style: none;
+      margin: 0 auto;
+    }
+
+    ul li {
+      display: inline-block;
+	  
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      display: block;
+	  margin-right: 20px;
+      width: 128px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+    }
+
+    li:nth-child(1) a {
+      background-color: #67e767;
+    }
+
+    li:nth-child(2) a {
+      background-color: royalblue;
+    }
+
+    li:nth-child(3) a {
+      background-color: pink;
+    }
+
+    article {
+      margin-left: 10px;
+      width: 550px;
+      height: 400px;
+	  position: absolute;
+    }
+
+    article:nth-child(2) {
+      background-color: #67e767;
+    }
+
+    article:nth-child(3) {
+      background-color: royalblue;
+    }
+
+	article:nth-child(4) {
+		background-color: pink;
+
+    }
+
+	article:target {
+		z-index: 10;
+	}
+  </style>
+
+  <body>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="#cp1">Primera</a>
+        </li>
+        <li>
+          <a href="#cp2">Segunda</a>
+        </li>
+        <li>
+          <a href="#cp3">Tercera</a>
+        </li>
+      </ul>
+      <article id="cp1">Este es el contenido de la 1 PESTAÑA</article>
+      <article id="cp2">Este es el contenido de la 2 PESTAÑA</article>
+      <article id="cp3">Este es el contenido de la 3 PESTAÑA</article>
+    </div>
+  </body>
+</html>
