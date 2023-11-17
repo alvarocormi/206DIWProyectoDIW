@@ -6,16 +6,17 @@
     <title>PR-2-8-7 Alvaro Cordero Miñambres</title>
     <style>
       * {
-        -ff: Verdana, sans-serif;
-        font-family: var(-ff);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         box-sizing: border-box;
-		margin: 0;
-		padding: 0;
+        margin: 0;
+        padding: 0;
       }
 
       .container {
         width: 100vw;
         height: 100vh;
+        background-image: url("img/fondo.png");
+
       }
 
       nav {
@@ -35,7 +36,8 @@
         margin: 0;
         padding: 0;
         padding-top: 5px;
-		font-size: 1.1rem;
+        font-size: 1.1rem;
+        overflow: hidden;
       }
 
       img {
@@ -49,77 +51,157 @@
         display: none;
       }
 
+      label {
+        cursor: pointer;
+      }
+
       label img:hover {
         border: 2px solid white;
       }
 
-	  ul {
-		width: 340px;
-		height: 100vh;
-		list-style: none;
-		padding: 0;
-		position: absolute;
-		top: 0;
-		overflow: scroll;
-	  }
+      ul {
+        width: 340px;
+        height: 100vh;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        margin-top: 0;
+        top: 0;
+        overflow: scroll;
+        background-color: white;
+        z-index: 1;
+      }
 
+      li {
+        width: 100%;
+        height: 48px;
+      }
 
-	  .hola {
-		display: block;
-		line-height: 48px;
-		width: 100%;
-		height: 48px;
-		color: white;
+      .hola {
+        display: block;
+        line-height: 48px;
+        width: 100%;
+        height: 48px;
+        color: white;
         background-color: #232f3e;
-		display: block;
-	  }
+        display: block;
+      }
 
-	  a,span {
-		display: block;
-		width: 100%;
-		height: 48px;
-		text-decoration: none;
-		line-height: 48px;
-		color: #353535;
-		background-color: white;
-		padding-left: 20px;
-		
-	  }
+      a,
+      span {
+        display: block;
+        width: 100%;
+        height: 48px;
+        text-decoration: none;
+        line-height: 48px;
+        color: #353535;
+        background-color: white;
+        padding-left: 20px;
+        cursor: pointer;
+      }
+
+      li a:hover {
+        background-color: #ccc;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      ul.mp {
+        left: -100%;
+        transition: all 0.5s ease-in-out;
+      }
+
+      ul.mapv {
+        left: 100%;
+        transition: all 0.5 ease-in-out;
+        top: 48px;
+      }
+
+      #open:checked ~ .mp {
+        left: 0;
+      }
 
 
-	  a:hover {
-		background-color: #ccc;
-	  }
+      #lbclose {
+        display: block;
+        width: 90vw;
+        height: 100vh;
+        position: absolute;
+        background-color: #07090c;
+        top: 0;
+        opacity: 0;
+        left: 340px;
+        visibility: hidden;
+        transition: opacity 0.6s ease-in-out;
+      }
 
-	  span {
-		font-weight: bold;
-	  }
+      #lbclose::before {
+        display: block;
+        content: "X";
+        position: absolute;
+        font-size: 2rem;
+        top: 10px;
+        left: 15px;
+        color: white;
+      }
+
+      #open:checked ~ #lbclose {
+        visibility: visible;
+        display: block;
+        opacity: 0.8;
+      }
+
+      #openApv:checked ~ .mp .mapv{
+        left: 0;
+      }
+      
     </style>
   </head>
   <body>
     <div class="container">
       <nav>
-        <header>Amazon</header>
+        <header></header>
         <menu>
           <input type="radio" name="br" id="open" />
           <label for="open">
             <img src="./img/menu.png" alt="listaMenu" />
           </label>
           <input type="radio" name="br" id="close" />
-          <ul>
-			<span class="hola">Hola, identificate</span>
-			<span>Tendencias</span>
+          <input type="radio" name="br" id="openApv" />
+          <input type="radio" name="br" id="closeApv" checked/>
+          <ul class="mp">
+            <span class="hola">Hola, identificate</span>
+            <span>Tendencias</span>
             <li><a href="#">Lo mas vendido</a></li>
             <li><a href="#">Ultimas novedades</a></li>
             <li><a href="#">Productos del momento</a></li>
-			<span>Contenido y dispositivos digitales</span>
-            <li><a href="#">Amazon Prime video</a></li>
+            <span>Contenido y dispositivos digitales</span>
+            <li>
+              <a href="#">
+                <label for="openApv">Amazon Prime video</label>
+              </a>
+            </li>
             <li><a href="#">Amazon Music</a></li>
             <li><a href="#">Amazon Photos</a></li>
             <li><a href="#">Echo y Alexa</a></li>
+            <ul class="mapv">
+              <li>
+                <a href="#">
+                  <label for="closeApv">MENÚ PRINCIPAL</label>
+                </a>
+              </li>
+              <span>Amazon Prime Video</span>
+              <li><a href="#">Todos los videos</a></li>
+              <li><a href="#">Tienda</a></li>
+              <li><a href="#">Categoria</a></li>
+              <li><a href="#">Mi espacio</a></li>
+            </ul>
           </ul>
+         
+          <label for="close" id="lbclose"></label>
         </menu>
-        <label for="close">close</label>
       </nav>
     </div>
   </body>
