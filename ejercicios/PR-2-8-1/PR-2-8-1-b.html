@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-8-2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Verdana, sans-serif;
+        font-weight: bold;
+        color: black;
+      }
+
+      .wrapper {
+        position: relative;
+      }
+
+      .wrapper label:nth-of-type(n) {
+        display: inline-block;
+        width: 120px;
+        height: 48px;
+        background-color: #6c78bb;
+        color: #eee;
+        text-align: center;
+        line-height: 48px;
+        border-radius: 5px 5px 0 0;
+        margin-right: 15px;
+      }
+
+      .wrapper article:nth-of-type(n) {
+        width: 750px;
+        height: 400px;
+        background-color: #ecd4b9;
+        position: absolute;
+        padding: 25px;
+      }
+
+      .wrapper input {
+        display: none;
+      }
+
+      .wrapper input:checked + label {
+        background-color: #87cefa;
+      }
+
+      .wrapper input:checked + label + article {
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="radio" name="rb" id="rb1" checked />
+      <label for="rb1">Radio 1</label>
+      <article>Este es el contenido del RADIO 1</article>
+      <input type="radio" name="rb" id="rb2" />
+      <label for="rb2">Radio 2</label>
+      <article>Este es el contenido del RADIO 2</article>
+      <input type="radio" name="rb" id="rb3" />
+      <label for="rb3">Radio 3</label>
+      <article>Este es el contenido del RADIO 3</article>
+      <input type="radio" name="rb" id="rb4" />
+      <label for="rb4">Radio 4</label>
+      <article>Este es el contenido del RADIO 4</article>
+      <input type="radio" name="rb" id="rb5" />
+      <label for="rb5">Radio 5</label>
+      <article>Este es el contenido del RADIO 5</article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR-2-8-4 Alvaro Cordero Miñamabres</title>
+    <style>
+        section {
+            width: 100vw;
+            height: 100vh;
+            background-color: #9e966b;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        ul {
+            padding: 0;
+            background: #aabbcc;
+        }
+
+        .menu {
+            width: 100%;
+            height: 64px;
+            margin: 0;
+            padding-left: 10px;
+            list-style: none;
+            position: relative;
+            ;
+            line-height: 64px;
+
+        }
+
+        .menu li {
+            display: inline-block;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        a {
+            display: block;
+            width: 164px;
+            height: 64px;
+            text-decoration: none;
+            line-height: 64px;
+        }
+
+        li:hover {
+            background: #bbccdd;
+        }
+
+        .sbm1,
+        .sbm2 {
+            width: 100%;
+            display: none;
+            position: absolute;
+        }
+
+        .menu li:hover .sbm1 {
+            display: block;
+        }
+
+        .sbm2 {
+            left: 100%;
+            top: 0;
+        }
+
+        .sbm1:hover .sbm2 {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Oficina</a></li>
+            <li>
+                <a href="#">Instituto &#x25bc;</a>
+                <ul class="sbm1">
+                    <li><a href="#">Fisica-Quimica</a></li>
+                    <li><a href="#">Ingles</a></li>
+                    <li>
+                        <a href="#">Matematicas &#x25ba;</a>
+                        <ul class="sbm2">
+                            <li href="#">B-Ciencias</li>
+                            <li href="#">A-Humanidades</li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </li>
+            <li><a href="#">Alumnos</a></li>
+        </ul>
+    </section>
+</body>
+
+</html>

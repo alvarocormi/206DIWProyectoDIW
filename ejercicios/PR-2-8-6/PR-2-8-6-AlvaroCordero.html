@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alvaro Cordero Miñambres</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+      background-color: white;
+      align-items: center;
+      text-align: center;
+      height: 50px;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      background-color: aquamarine;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+    .producto {
+      margin-top: 50px;
+      margin-left: 40px;
+      max-width: 180px;
+      max-height: 300px;
+      background-color: white;
+      position: relative;
+      display: inline-block;
+      margin: auto;
+      margin-right: 100px;
+      overflow: hidden;
+    }
+
+    .producto img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .infoProducto {
+      background-color: lightgray;
+    }
+
+    .infoProducto p {
+      margin: 0;
+      padding-top: 20px;
+      margin-top: 10px;
+      color: green;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    .infoProducto a {
+      text-decoration: none;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      background-image: url("images/boton_amarillo.png");
+      display: block;
+      width: 100px;
+      position: absolute;
+      transform: translate(4%, -50%);
+    }
+
+    .infoProducto img {
+      width: 30px;
+    }
+
+    .infoProducto ul {
+      margin: 0;
+      padding-left: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .lista {
+      position: absolute;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 0;
+      padding: 0;
+      margin: 0;
+      transform: translate(1%, -240%);
+      left: -100%;
+      transition: left 0.5s ease-in-out;
+    }
+
+    .lista li {
+      display: inline-block;
+    }
+
+    .lista img {
+      width: 30px;
+    }
+
+    .producto:hover .lista {
+      left: 0;
+    }
+  </style>
+  <body>
+    <section class="productos">
+      <header>
+        <h1>LISTADO DE ARTÍCULOS</h1>
+      </header>
+      <div class="producto">
+        <img src="./images/reloj.jpg" alt="apple" />
+        <ul class="lista">
+          <li>
+            <img src="./images/vista-previa.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/listadeseo.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/comparador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/configurador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/carro.png" alt="" />
+          </li>
+        </ul>
+        <div class="infoProducto">
+          <a href="#">399,00€</a>
+          <p>RELOJ DE CUARZO CON CORREA DE SILICONA INFORMAL...</p>
+          <ul>
+            <li>
+              <img src="./images/novedad.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/topventas.png" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="./images/stock-1.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="./images/apple-watch-6.jfif" alt="apple" />
+        <ul class="lista">
+          <li>
+            <img src="./images/vista-previa.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/listadeseo.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/comparador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/configurador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/carro.png" alt="" />
+          </li>
+        </ul>
+        <div class="infoProducto">
+          <a href="#">399,00€</a>
+          <p>RELOJ DE CUARZO CON CORREA DE SILICONA INFORMAL...</p>
+          <ul>
+            <li>
+              <img src="./images/novedad.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/topventas.png" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="./images/stock-1.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="./images/samsungGalaxyWatchActive2.png" alt="apple" />
+        <ul class="lista">
+          <li>
+            <img src="./images/vista-previa.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/listadeseo.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/comparador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/configurador.png" alt="" />
+          </li>
+          <li>
+            <img src="./images/carro.png" alt="" />
+          </li>
+        </ul>
+        <div class="infoProducto">
+          <a href="#">279,00€</a>
+          <p>APPLE WATCH-6 CAJA 44MM ALUMINIO Y CORREA AZUL</p>
+          <ul>
+            <li>
+              <img src="./images/novedad.png" alt="" />
+            </li>
+            <li>
+              <img src="./images/topventas.png" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="#" alt="" />
+            </li>
+            <li>
+              <img src="./images/stock-1.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

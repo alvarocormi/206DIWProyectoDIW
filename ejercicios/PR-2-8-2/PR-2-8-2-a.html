@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=.wrapper, initial-scale=1.0" />
+    <title>PR-2-8-2-a Alvaro Cordero Miñambres</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .wrapper {
+        width: 650px;
+      }
+
+      .wrapper a {
+        display: block;
+        background-color: #dddd;
+        color: #4682b4;
+        font-weight: bold;
+        width: 100%;
+        text-decoration: none;
+        padding-left: 10px;
+        height: 48px;
+        line-height: 48px;
+		border-bottom: 1px solid #aaa;
+      }
+
+      .wrapper p {
+        width: 100%;
+        background-color: #eeee;
+        margin: 0;
+        padding: 10px;
+      }
+
+	  p {
+		display: none;
+	  }
+
+      p:target {
+		display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="#p1">Titulo 1</a>
+      <p id="p1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+        reiciendis, exercitationem minus vel, incidunt dicta magnam placeat
+        quaerat debitis odio, voluptate rem eos quasi ex itaque obcaecati
+        reprehenderit fugiat culpa!
+      </p>
+      <a href="#p2">Titulo 2</a>
+      <p id="p2">
+        Labore ex deserunt facere blanditiis voluptate veniam dolorum esse
+        consectetur non! Voluptatibus, tenetur quam odio quo reprehenderit
+        laudantium. Repellendus blanditiis eos, aliquam saepe rem voluptate illo
+        illum quibusdam repudiandae neque!
+      </p>
+      <a href="#p3">Titulo 3</a>
+      <p id="p3">
+        Repellendus, voluptatum! Ad, inventore? Necessitatibus deleniti harum
+        quidem quas minima repudiandae fugit ut optio adipisci eius corrupti
+        earum eos eum nesciunt quod, rerum itaque cumque natus dicta vitae,
+        voluptas nostrum!
+      </p>
+      <a href="#p4">Cerrar</a>
+    </div>
+  </body>
+</html>
