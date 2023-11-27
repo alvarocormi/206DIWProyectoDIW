@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-9-3 Alvaro Cordero Miñambres</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      .container {
+        width: 450px;
+        height: 350px;
+        background-color: #dbc8c8;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+        margin-bottom: 50px;
+      }
+
+      .container article {
+        background-color: purple;
+        color: white;
+        flex: 0 1 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container article:nth-child(1) {
+        height: 340px;
+      }
+
+      .container article:nth-child(2) {
+        height: 280px;
+      }
+
+      .container article:nth-child(3) {
+        height: 220px;
+      }
+
+      /*SEGUNDA PRACTICA*/
+      .wrapper {
+        width: 450px;
+        height: 350px;
+        background-color: lawngreen;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .wrapper article:nth-child(n) {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        background-color: red;
+        border-radius: 5px;
+        display: flex;
+      }
+
+      .punto {
+        width: 25px;
+        height: 25px;
+        background-color: black;
+        border-radius: 50%;
+      }
+
+      .dado1 {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dado2 {
+        justify-content: space-between;
+      }
+
+      .dado2 .punto:nth-of-type(2) {
+        /* position: absolute;
+        bottom: 5px;
+        right: 5px; */
+        align-self: flex-end;
+      }
+
+      .dado3 {
+        justify-content: space-between;
+      }
+
+      .dado3 .punto:nth-of-type(2) {
+        align-self: center;
+      }
+
+      .dado3 .punto:nth-of-type(3) {
+        align-self: flex-end;
+      }
+
+      .dado4 {
+        flex-flow: wrap;
+        gap: 40px;
+      }
+
+      .dado5 {
+        flex-flow: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+
+      .dado5 .punto:nth-of-type(2) {
+        margin-top: 32.5px;
+      }
+
+      .dado6 {
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-content: space-between;
+      }
+
+      /*TERCERA PRACTICA*/
+
+      .menu {
+        display: flex;
+        width: 600px;
+        height: 100px;
+      }
+
+      a {
+        text-decoration: none;
+        flex-basis: 150px;
+        height: auto;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      .menu a:nth-child(1) {
+        background-color: #266400;
+      }
+
+      .menu a:nth-child(2) {
+        background-color: #f1a500;
+      }
+
+      .menu a:nth-child(3) {
+        background-color: #5882b4;
+      }
+
+      .menu a:nth-child(4) {
+        background-color: #770282;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <article>1</article>
+      <article>2</article>
+      <article>3</article>
+    </section>
+    <section class="wrapper">
+      <article class="dado1">
+        <div class="punto"></div>
+      </article>
+      <article class="dado2">
+        <div class="punto"></div>
+        <div class="punto"></div>
+      </article>
+      <article class="dado3">
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+      </article>
+      <article class="dado4">
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+      </article>
+      <article class="dado5">
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+      </article>
+      <article class="dado6">
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+        <div class="punto"></div>
+      </article>
+    </section>
+    <section class="menu">
+      <a href="#">Centro</a>
+      <a href="#">Profesores</a>
+      <a href="#">Asignaturas</a>
+      <a href="#">Cursos</a>
+    </section>
+  </body>
+</html>
