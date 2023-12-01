@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-9-5</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+        --fc: white;
+        /* margin: 0 auto; */
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      nav {
+        width: 400px;
+        height: 320px;
+        background-color: #5d5b87;
+        display: flex;
+        flex-flow: column;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--fc);
+        font-weight: bold;
+        font-size: 1.3rem;
+        flex: 1 50px;
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a:hover {
+        background-color: #98ceeb;
+      }
+
+      @media all and (min-width: 577px) {
+        nav {
+          width: 100vw;
+          height: 56px;
+          flex-flow: row;
+          justify-content: space-around;
+        }
+
+        nav a:nth-child(5) {
+          display: none;
+        }
+      }
+
+      @media all and (min-width: 769px) {
+        nav {
+          justify-content: flex-end;
+        }
+
+        nav a {
+          flex:0 1 88px;
+        }
+
+        nav a:nth-child(5) {
+          display: flex;
+          order: -1;
+          margin-right: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">&#9883;</a>
+      </nav>
+    </div>
+  </body>
+</html>
