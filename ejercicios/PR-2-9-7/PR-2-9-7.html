@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-9-7</title>
+  <style>
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 98vw;
+      height: 98vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    .carousel {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      outline: 1px solid black;
+      overflow: hidden;
+    }
+
+    .photos {
+      display: flex;
+      width: 2400px;
+      position: relative;
+      transition: all 1s ease;
+    }
+
+    section a {
+      width: 50px;
+      height: 50px;
+      background-color: #6ab096;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+      bottom: 40px;
+      left: 170px;
+    }
+
+    section a:nth-child(2) {
+      left: 240px;
+    }
+    section a:nth-child(3) {
+      left: 310px;
+    }
+    section a:nth-child(4) {
+      left: 380px;
+    }
+
+    a:nth-child(2):focus-within ~ .photos {
+      transform: translateX(-600px); 
+    }
+    a:nth-child(3):focus-within ~ .photos {
+      transform: translateX(-1200px); 
+    }
+    a:nth-child(4):focus-within ~ .photos {
+      transform: translateX(-1800px); 
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>CAROUSEL</h1>
+    <section class="carousel">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+      <main class="photos">
+        <img src="http://picsum.photos/id/111/600/400" alt="">
+        <img src="http://picsum.photos/id/112/600/400" alt="">
+        <img src="http://picsum.photos/id/113/600/400" alt="">
+        <img src="http://picsum.photos/id/114/600/400" alt="">
+      </main>
+    </section>
+  </div>
+</body>
+
+</html>

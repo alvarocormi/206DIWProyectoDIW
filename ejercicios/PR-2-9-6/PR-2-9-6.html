@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-9-6</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .table1 {
+      display: flex;
+      flex-flow: row wrap;
+      width: 600px;
+      height: 200px;
+      outline: 1px solid black;
+    }
+
+    .table1 article {
+      flex: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+    }
+
+    .table1 article:nth-child(-n+4) {
+      background-color: blueviolet;
+    }
+
+    .table1 article:nth-child(2n+5) {
+      background-color: burlywood;
+    }
+
+    .table1 article:nth-child(2n+6) {
+      background-color: cyan;
+    }
+
+    /* TABLA 2*/
+    .table2 {
+      width: 600px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .table2 section {
+      flex: 64px;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .table2 section article {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .table2 section:nth-child(1) article {
+      flex: 25%;
+      background-color: #a2cd26;
+    }
+
+    section:nth-child(2) {
+      background-color: burlywood;
+    }
+
+    section:nth-child(3) {
+      background-color: cyan;
+    }
+
+    section:nth-child(4) {
+      background-color: #ef8c03;
+    }
+
+    section:nth-child(5) {
+      background-color: #bf5c5e;
+    }
+
+    .table2 section:nth-child(2) article:first-child {
+      flex: 25%;
+    }
+
+    .table2 section:nth-child(2) article:nth-last-of-type(2) {
+      flex: 50%;
+    }
+
+    .table2 section:nth-child(2) article:last-child {
+      flex: 25%;
+    }
+
+    .table2 section:nth-child(3) article:first-child,
+    .table2 section:nth-child(3) article:last-child {
+      flex: 25%;
+    }
+
+    .table2 section:nth-child(3) article:nth-of-type(n+2):nth-of-type(-n+4) {
+      flex: 16.666%;
+    }
+
+    .table2 section:nth-child(4) article:nth-of-type(-n+5) {
+      flex: 5%;
+    }
+
+    .table2 section:nth-child(4) article:nth-of-type(6) {
+      flex: 50%;
+    }
+
+    .table2 section:nth-child(4) article:nth-of-type(7) {
+      flex: 25%;
+    }
+
+    .table2 section:nth-child(5) article:nth-of-type(n+3):nth-of-type(-n+4) {
+      flex: 25%;
+    }
+
+    .table2 section:nth-child(5) article:nth-of-type(-n+2),
+    .table2 section:nth-child(5) article:nth-of-type(n+5) {
+      flex: 12.5%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>TABLAS 1</h2>
+    <div class="table1">
+      <article>1</article>
+      <article>2</article>
+      <article>3</article>
+      <article>4</article>
+      <article>5</article>
+      <article>6</article>
+      <article>7</article>
+      <article>8</article>
+      <article>9</article>
+      <article>10</article>
+      <article>11</article>
+      <article>12</article>
+      <article>13</article>
+      <article>14</article>
+      <article>15</article>
+      <article>16</article>
+    </div>
+    <h2>TABLAS 2</h2>
+    <div class="table2">
+      <section class="tr1">
+        <article class="td">1</article>
+        <article class="td">2</article>
+        <article class="td">3</article>
+        <article class="td">4</article>
+      </section>
+      <section class="tr2">
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+      </section>
+      <section class="tr3">
+        <article class="td">8</article>
+        <article class="td">9</article>
+        <article class="td">10</article>
+        <article class="td">11</article>
+        <article class="td">12</article>
+      </section>
+      <section class="tr4">
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+        <article class="td"><img src="http://picsum.photos/id/111/50/50" alt=""></article>
+      </section>
+      <section class="tr5">
+        <article class="td">20</article>
+        <article class="td">21</article>
+        <article class="td">22</article>
+        <article class="td">23</article>
+        <article class="td">24</article>
+        <article class="td">25</article>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
