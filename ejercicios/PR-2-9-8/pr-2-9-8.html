@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr-2-9-8</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 300vh;
+            background-color: #333;
+        }
+
+        header {
+            position: relative;
+            width: 100vw;
+            height: 48px;
+            background: black;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            padding-right: 50px;
+            z-index: 10;
+        }
+
+        header * {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logobyd {
+            height: 1.8rem;
+        }
+
+        nav {
+            margin: 0;
+            position: sticky;
+            top: 0px;
+            background: #44484B;
+            height: 70px;
+            width: 100vw;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 5;
+        }
+
+        a {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav>a {
+            flex: 1 100%;
+            height: 100%;
+            display: flex;
+            color: white;
+            background: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mnu {
+            position: relative;
+            z-index: 6;
+        }
+
+        .sbmnu {
+            position: absolute;
+            left: 0;
+            top: 72px;
+            z-index: 4;
+        }
+
+        .mnu2__sbmnu,
+        .mnu5__sbmnu {
+            width: 100vw;
+            height: 350px;
+            padding-top: 25px;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            transition: all 0.5s ease;
+            transform: translateY(-200%);
+        }
+
+        .mnu2__sbmnu>label {
+            display: block;
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .model {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-around;
+            transition: all 0.5s ease-in;
+        }
+
+        .model img {
+            transition: all 0.5s ease;
+            width: 150px;
+            height: 120px;
+        }
+
+        .model a {
+            color: #333;
+        }
+
+        .model:hover {
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        .model img:hover {
+            transform: scale(1.2);
+        }
+
+        .mnu2:hover~.mnu2__sbmnu,
+        .mnu2__sbmnu:hover,
+        .mnu5:hover~.mnu5__sbmnu,
+        .mnu5__sbmnu:hover {
+            transform: translateY(0%);
+        }
+
+        .fondocoche {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mnu2__sbmnu>label::after {
+            display: block;
+            position: relative;
+            top: 10px;
+            content: "";
+            width: 100%;
+            height: 2.5px;
+            background-color: #333;
+            display: none;
+        }
+
+        input{
+            display: none;
+        }
+
+        .mnu2__sbmnu>input:checked+label::after {
+            display: block;
+        }
+
+        .mnu2__sbmnu>input:checked+label+.model {
+            z-index: 55;
+        }
+        .mnu5__sbmnu article{
+            height: 100px;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+        }
+
+        .mnu5__sbmnu article a{
+            color:black;
+            font-weight: normal;
+            padding-bottom: 10px;
+        }
+        .mnu5__sbmnu article a:hover{
+            text-decoration: underline;
+        }
+
+        .small {
+            width: 100%;
+            height: 70px;
+            background: #282828;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            padding:0px 15px;
+            display: none;
+        }
+
+        .small a:first-child {
+            margin-right: auto;
+        }
+
+        .small a {
+            color: white;
+        }
+        
+        /*MEDIA QUERYS*/
+        @media screen and (width < 720px) {
+
+            header,main {
+                display: none;
+            }
+
+            main {
+                top: 70px
+            }
+            
+            .small {
+                position: fixed;
+                top: 0px;
+                display: flex;
+                z-index: 100;
+            }
+
+            nav {
+                position: relative;
+                padding-left: 50px;
+                top: 70px;
+                background-color: white !important;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                z-index: 10;
+                align-items: flex-start;
+            }
+
+            .sbmnu {
+                position: absolute;
+                left: 0;
+                top: 72px;
+                z-index: 20;
+            }
+
+            .mnu2__sbmnu,
+            .mnu5__sbmnu {
+                width: 100vw;
+                height: 90vh;
+                padding-top: 25px;
+                background: white;
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                transition: all 0.5s ease;
+                transform: translateY(-200%);
+            }
+
+            nav {
+                margin: 0;
+                position: sticky;
+                top: 0px;
+                background: #44484B;
+                height: 90vh;
+                width: 100vw;
+                display: flex;
+                justify-content: flex-end;
+                z-index: 5;
+            }
+
+            nav>a {
+                flex: 1 100%;
+                height: 100%;
+                display: flex;
+                color: black;
+                background: none;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mnu5__sbmnu {
+                flex-flow: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding-left: 50px;
+            }
+
+            .mnu5__sbmnu article {
+                margin: 50px;
+            }
+
+            .mnu5__sbmnu article:nth-child(n) {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <input type="search" placeholder="Buscar">
+            <a href="#">Global</a>
+            <a href="#">País/Idioma</a>
+        </header>
+        <div class="small">
+            <a href="#">BYD</a>
+            <a href="#">&#128270</a>
+            <a href="#">X</a>
+        </div>
+        <nav>
+            <a class="mnu mnu1" href="#"><img class="logobyd" src="byd.png" alt="BYD"></a>
+            <a class="mnu mnu2" href="#">MODELOS ▼</a>
+            <a class="mnu mnu3" href="#">ACERCA DE BYD</a>
+            <a class="mnu mnu4" href="#">ENCUENTRA TU CONCESIONARIO</a>
+            <a class="mnu mnu5" href="#">MENÚ</a>
+            <div class="sbmnu mnu1__sbmnu"></div>
+            <div class="sbmnu mnu2__sbmnu">
+                <input type="radio" name="rd" id="DOLPHIN" checked>
+                <label for="DOLPHIN">BYD DOLPHIN</label>
+                <div class="model">
+                    <img src="dolphin.png" alt="modelo1">
+                    <a href="#">BYD DOLPHIN</a>
+                </div>
+                <input type="radio" name="rd" id="SEAL">
+                <label for="SEAL">BYD SEAL</label>
+                <div class="model">
+                    <img src="seal.png" alt="modelo2">
+                    <a href="#">BYD SEAL</a>
+                </div>
+                <input type="radio" name="rd" id="ATTO3">
+                <label for="ATTO3">BYD ATT03</label>
+                <div class="model">
+                    <img src="att03.png" alt="modelo3">
+                    <a href="#">BYD ATT03</a>
+                </div>
+                <input type="radio" name="rd" id="HAN">
+                <label for="HAN">BYD HAN</label>
+                <div class="model">
+                    <img src="han.png" alt="modelo4">
+                    <a href="#">BYD HAN</a>
+                </div>
+                <input type="radio" name="rd" id="TANG">
+                <label for="TANG">BYD TANG</label>
+                <div class="model">
+                    <img src="tang.png" alt="modelo5">
+                    <a href="#">BYD TANG</a>
+                </div>
+            </div>
+            <div class="sbmnu mnu5__sbmnu">
+                <article>
+                    <h2>Soporte</h2>
+                    <a href="#">Mantenimiento de dervicio</a>
+                    <a href="#">Asistencia BYD</a>
+                </article>
+                <article>
+                    <h2>Noticias</h2>
+                    <a href="#">Noticias</a>
+                </article>
+            </div>
+        </nav>
+        <main>
+            <img class="fondocoche" src="fondo.png" alt="coche">
+            <img class="fondocoche" src="fondo1.png" alt="coche1">
+            <img class="fondocoche" src="fondo2.png" alt="coche2">
+        </main>
+    </section>
+</body>
+
+</html>
