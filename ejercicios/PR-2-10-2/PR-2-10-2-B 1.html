@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-10-2-B</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    .wrapper {
+      width: 90vw;
+      height: 99vh;
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+      grid-template-rows: 33.33% 33.33% 33.33%;
+      grid-template-areas:
+        "hd hd hd"
+        "nv mn as"
+        "nv ft ft"
+      ;
+    }
+
+    .wrapper header {
+      background-color: #d2691e;
+      grid-area: hd;
+    }
+
+    .wrapper nav {
+      background-color: #6495ed;
+      grid-area: nv;
+    }
+
+    .wrapper main {
+      background-color: #ff7f50;
+      grid-area: mn;
+    }
+
+    .wrapper aside {
+      background-color: #2e8b57;
+      grid-area: as;
+    }
+
+    .wrapper footer {
+      background-color: #c0c0c0;
+      grid-area: ft;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Main</main>
+    <aside>aside</aside>
+    <footer>footer</footer>
+  </div>
+</body>
+
+</html>
