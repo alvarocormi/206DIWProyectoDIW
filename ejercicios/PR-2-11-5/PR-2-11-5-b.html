@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-11-5-b Alvaro Cordero</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .fx-c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 800px;
+        height: 600px;
+        background-color: #ddd;
+        margin: 25px auto;
+        border: 0.1px solid transparent;
+      }
+
+      .face {
+        position: relative;
+        left: -15px;
+        margin: 25px;
+        width: 200px;
+        height: 250px;
+        background-color: burlywood;
+        border-radius: 30% 30% 50% 50% / 50%;
+        animation: flip 2s linear infinite alternate-reverse;
+      }
+
+      .eye1,
+      .eye2 {
+        width: 40px;
+        height: 20px;
+        position: absolute;
+        background: rgb(2, 0, 36);
+        background: radial-gradient(
+          circle,
+          rgba(2, 0, 36, 1) 12%,
+          rgba(9, 9, 121, 1) 22%,
+          rgba(255, 255, 255, 1) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        top: 60px;
+        border-radius: 50%;
+      }
+
+      .eye1 {
+        left: 40px;
+      }
+
+      .eye2 {
+        right: 40px;
+      }
+
+      .nose {
+        width: 20px;
+        height: 55px;
+        position: absolute;
+        background-color: rgb(161, 123, 77);
+        border-radius: 25% 25% 50% 50% / 50%;
+      }
+
+      .mouth {
+        width: 60px;
+        height: 20px;
+        background: burlywood;
+        border-radius: 50%;
+        border-bottom: 12px solid red;
+        position: absolute;
+        bottom: 50px;
+      }
+
+      @keyframes flip {
+        from {
+          transform: translateX(0%) translateY(0px) rotate(0deg);
+          
+        }
+
+        to{
+          transform: translateX(570px) translateY(100px) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <article class="face fx-c">
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-11-4 Alvaro Cordero</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-size: 3rem;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .wrapper {
+      width: 600px;
+      height: 600px;
+      background-color: #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 350px;
+    }
+
+    .carta {
+      width: 150px;
+      height: 250px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 1s linear;
+      animation:  girar 3s linear infinite alternate-reverse;
+    }
+    
+    .cara , .reves {
+      width: 150px;
+      height: 250px;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backface-visibility: hidden;
+    }
+
+    .cara {
+      background-color: blue;
+      z-index: 1;
+      backface-visibility: hidden;
+    }
+
+    .reves {
+      background-color: red;
+      transform: rotateY(180deg);
+    }
+
+    .carta:hover {
+      transform: rotateY(180deg);
+    }
+    
+    @keyframes girar {
+      to {
+        transform: rotateY(180deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="carta">
+      <div class="cara">1</div>
+      <div class="reves">2</div>
+    </div>
+  </div>
+</body>
+
+</html>

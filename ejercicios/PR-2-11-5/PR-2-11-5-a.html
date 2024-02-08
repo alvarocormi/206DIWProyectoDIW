@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PR-2-11-5-a Alvaro Cordero</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .fx-c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 600px;
+        height: 600px;
+        background-color: yellowgreen;
+        animation: colorFondo 4s linear infinite alternate;
+        margin: auto;
+      }
+
+      @keyframes colorFondo {
+        to {
+          background-color: cornflowerblue;
+        }
+      }
+
+      .wrapper {
+        width: 500px;
+        height: 500px;
+        background-color: aquamarine;
+        position: relative;
+      }
+
+      .suelo {
+        width: 475px;
+        height: 350px;
+        position: relative;
+        top: 40px;
+        border: 10px solid black;
+        border-top: none;
+		overflow: hidden;
+      }
+
+      .bola {
+        width: 60px;
+        height: 60px;
+        background-color: #bf342a;
+        position: absolute;
+        bottom: 0;
+		left: 0;
+        border-radius: 50%;
+        animation: botar 3s linear infinite alternate;
+      }
+
+      @keyframes botar {
+        25% {
+          left: 22%;
+          bottom: 250px;
+        }
+
+        50% {
+          left: 48%;
+          bottom: 0;
+        }
+
+        75% {
+          left: 72%;
+          bottom: 250px;
+        }
+
+        100% {
+          left: 87%;
+          bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container fx-c">
+      <article class="wrapper fx-c">
+        <div class="suelo">
+          <div class="bola"></div>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
