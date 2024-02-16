@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-11-7 Alvaro Cordero</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    section {
+      width: 80vw;
+      height: 80vh;
+      background-color: black;
+      color: white;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    article {
+      width: 600px;
+      height: 600px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .rodamiento {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 0, 0, 1) 25%, rgba(102, 102, 102, 1) 5%, rgba(102, 102, 102, 1) 80%, rgba(255, 255, 255, 0) 52%);
+      border: 15px dashed black;
+      border-radius: 50%;
+      animation: rotarRodamiento 4s linear infinite;
+    }
+
+    @keyframes rotarRodamiento {
+      from {
+        transform: rotateZ(-360deg);
+      }
+      to {
+        transform: rotateZ(360deg);
+      }
+    }
+
+    #OFF:checked ~.rodamiento{ 
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>
+      <h2>RODAMIENTO</h2>
+      <input type="radio" name="rd" id="ON" checked>
+      <label for="ON">ON</label>
+      <input type="radio" name="rd" id="OFF">
+      <label for="OFF">OFF</label>
+      <div class="rodamiento"></div>
+    </article>
+  </section>
+</body>
+
+</html>

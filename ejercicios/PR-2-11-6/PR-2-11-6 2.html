@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PR-2-11-6 Alvaro Cordero</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    section {
+      width: 600px;
+      height: 600px;
+      background-color: antiquewhite;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fx-c {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cubo, .face {
+      width: 300px;
+      height: 300px;
+    }
+
+    .cubo {
+      transform-style: preserve-3d;
+      /* background-color: pink; */
+      position: relative;
+      transform: perspective(700px) rotateX(-20deg) rotateY(-30deg);
+      animation: girarXY 5s linear infinite;
+    }
+
+    .face {
+      position: absolute;
+    }
+
+    .left {
+      background-color: white;
+      transform: rotateY(90deg) translateZ(-150px);
+    }
+
+    .back {
+      background-color: red;
+      transform: translateZ(-150px);
+    }
+
+    .front {
+      background-color: blue;
+      transform: translateZ(150px);
+    }
+
+    .bottom {
+      background-color: orange;
+      transform: rotateX(90deg) translateZ(-150px);
+    }
+
+    .top {
+      background-color: green;
+      transform: rotateX(90deg) translateZ(150px);
+    }
+
+    .right {
+      background-color: yellow;
+      transform: rotateY(90deg) translateZ(150px);
+    }
+
+    @keyframes girarXY {
+      from {
+        transform: rotateX(-180deg) rotateY(-360deg);
+      }
+      to {
+        transform: rotateX(180deg) rotateY(360deg);
+      }
+    }
+
+    .cubo:hover {
+      animation-play-state: paused; /* Detiene la animación al hacer hover */
+    }
+    
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="cubo">
+      <div class="face left"></div>
+      <div class="face right"></div>
+      <div class="face front"></div>
+      <div class="face back"></div>
+      <div class="face top"></div>
+      <div class="face bottom"></div>
+    </div>
+  </section>
+</body>
+
+</html>
